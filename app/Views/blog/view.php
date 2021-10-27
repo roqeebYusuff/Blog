@@ -120,7 +120,7 @@
                     </div>                
                               
                     <!-- All replies to a comment -->
-                    <div class="replies_here" id="replies_to_comment_<?php echo $comment->id ?> "> 
+                    <div class="replies_here" id="replies_to_comment_<?php echo $comment->id ?>" data-commentid="<?php echo $comment->id ?>" data-postid="<?php echo $post['id'] ?>">
                         <?php if(count($replies) > 0): ?>
                             <?php foreach($replies as $reply): ?>
                                 <header class="comment-header">
@@ -276,8 +276,7 @@
                 $('#comment_form').css('opacity','');
             }
         })
-    }  
-    
+    }
     // function addReply(id)
     // {
     //     if(!$('#comment_reply_form_'+id).valid())

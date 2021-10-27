@@ -57,13 +57,11 @@ class Blog extends BaseController
 			$data['comments'] = $this->model->getComments($post_id);
 
 			//Get all replies to each comment
-
-
 			if(!empty($data['comments']))
 			{
 				$data['username'] = $this->model->getUsernameById($post_id);
 
-				$comment_id = 1;
+				$comment_id = 2;
 				$data['replies'] = $this->model->getRepliesByCommentId($comment_id,$post_id);
 			}
 			
